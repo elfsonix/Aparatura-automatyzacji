@@ -44,3 +44,8 @@ Backup of *.doc*
 *.~vsd*
 
 # End of https://www.gitignore.io/api/microsoftoffice
+### LibreOffice ###
+# LibreOffice locks
+.~lock.*#
+
+# End of https://www.gitignore.io/api/libreoffice
