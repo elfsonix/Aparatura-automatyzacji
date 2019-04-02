@@ -1,0 +1,13 @@
+18750 - 25.12s
+18650- spadaa wolno
+20000 - 6.29s
+27000- 1.40s
+
+Wartoœæ sterowana PWM
+1400 - 25impulsów/s [Hz] <- min wartoœæ sterowania PWM, przy której zaczyzna obracaæ siê wentylator
+RPM: 5130 obr/min - 170[Hz] <- max prêdkoœæobrotowa wentylatora
+PWM sterowana:
+18000~moment równowagi kuleczki
+1750 - te¿
+1700 - zaczyna opadaæ
+1720 - opada

@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--                                                                             -->
+<!--   Company:       Hans Turck GmbH & Co. KG                                   -->
+<!--   Device:        Profinet IO Device                                         -->
+<!--   Version:       V0.2                                                       -->
+<!--   Date:          Jan 12., 2015                                              -->
+<!--   Author:        Schelte                                                    -->
+<!--                                                                             -->
+<!--   Copyright (c) 2002-2015 Hans Turck GmbH & Co. KG                          -->
+<!--                                                                             -->
+<!--                                                                             -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v2.3.xsd">
+   <ProfileHeader>
+      <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+      <ProfileRevision>1.00</ProfileRevision>
+      <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+      <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+      <ProfileClassID>Device</ProfileClassID>
+      <ISO15745Reference>
+         <ISO15745Part>4</ISO15745Part>
+         <ISO15745Edition>1</ISO15745Edition>
+         <ProfileTechnology>GSDML</ProfileTechnology>
+      </ISO15745Reference>
+   </ProfileHeader>
+   <ProfileBody>
+      <DeviceIdentity VendorID="0x013D" DeviceID="0x7101">
+         <InfoText TextId="GW-TextId DeviceID InfoText"/>
+         <VendorName Value="TURCK"/>
+      </DeviceIdentity>
+      <DeviceFunction>
+         <Family MainFamily="I/O" ProductFamily="TURCK"/>
+      </DeviceFunction>
+      <ApplicationProcess>
+         <DeviceAccessPointList>
+            <DeviceAccessPointItem ID="DAP 1"
+                  PhysicalSlots="0..16"
+                  ModuleIdentNumber="0x01204000"
+                  MinDeviceInterval="128"
+                  ImplementationType="Turck"
+                  DNS_CompatibleName="turck-cds3-pn-device"
+                  AddressAssignment="DCP;LOCAL"
+                  NameOfStationNotTransferable="false"
+                  FixedInSlots="0"
+                  ObjectUUID_LocalIndex="1"
+                  MultipleWriteSupported="true"
+                  DeviceAccessSupported="false"
+                  PNIO_Version="V2.3"
+                  >
+               <ModuleInfo CategoryRef="KA-REF dap">
+                  <Name TextId="DAP1_Name"/>
+                  <InfoText TextId="DAP1_InfoText"/>
+                  <VendorName Value="TURCK"/>
+                  <HardwareRelease Value="HW 1"/>
+                  <SoftwareRelease Value="SW V 1.3.22"/>
+               </ModuleInfo>
+               <SubslotList>
+                  <SubslotItem SubslotNumber="32768" TextId="X1"/>
+                  <SubslotItem SubslotNumber="32769" TextId="X1P1"/>
+                  <SubslotItem SubslotNumber="32770" TextId="X1P2"/>
+               </SubslotList>
+               <IOConfigData MaxInputLength="1024" MaxOutputLength="1024"/>
+               <UseableModules>
+                  <!-- Input Modules -->
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1I" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1I_W" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1I_D" AllowedInSlots="1..16"/>
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2I" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2I_W" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2I_D" AllowedInSlots="1..16"/>
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4I" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4I_W" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4I_D" AllowedInSlots="1..16"/>
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8I" AllowedInSlots="1..16"/>
+  				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8I_W" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8I_D" AllowedInSlots="1..16"/>
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16I" AllowedInSlots="1..16"/>
+  				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16I_W" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16I_D" AllowedInSlots="1..16"/>				  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_32I" AllowedInSlots="1..16"/>
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_32I_W" AllowedInSlots="1..16"/>
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_64I" AllowedInSlots="1..16"/>
+                  <!-- Output Modules -->
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1O_W" AllowedInSlots="1..16"/>				  
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_1O_D" AllowedInSlots="1..16"/>				  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2O_W" AllowedInSlots="1..16"/>				  
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_2O_D" AllowedInSlots="1..16"/>				  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4O_W" AllowedInSlots="1..16"/>				  
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_4O_D" AllowedInSlots="1..16"/>					  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8O_W" AllowedInSlots="1..16"/>				  
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_8O_D" AllowedInSlots="1..16"/>				  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16O_W" AllowedInSlots="1..16"/>				  
+				  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_16O_D" AllowedInSlots="1..16"/>				  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_32O" AllowedInSlots="1..16"/>
+			      <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_32O_W" AllowedInSlots="1..16"/>					  
+                  <ModuleItemRef ModuleItemTarget="ModRef_BL20_Generic_64O" AllowedInSlots="1..16"/>
+                  <!-- End generated code (sec. ModuleItemTarget) -->
+               </UseableModules>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="IDS_D1" SubmoduleIdentNumber="0x00001000" Writeable_IM_Records="1 2 3 4">
+                     <IOData IOPS_Length="1" IOCS_Length="1"/>
+                     <RecordDataList>
+                        <ParameterRecordDataItem Index="1" Length="2" TransferSequence="1">
+                           <Name TextId="GW-TextId GW-Parameter"  />
+                           <Const Data="0x00,0x00" ByteOffset="0"/>
+                           <Ref ValueItemTarget="PARAM-REF-GW Diagnosen aller Module"                          DataType="Bit"       ByteOffset="1" BitOffset="1"               DefaultValue="0" AllowedValues="0..1" TextId="GW-TextId Diagnosen aller Module"/>
+                        </ParameterRecordDataItem>
+                     </RecordDataList>
+                     <ModuleInfo CategoryRef="KA-REF dap submod">
+                        <Name TextId="DAP1_SubmodName"/>
+                        <InfoText TextId="DAP1_SubmodInfoText"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+               <SystemDefinedSubmoduleList>
+                  <InterfaceSubmoduleItem ID="1" SupportedRT_Classes="RT_CLASS_1" NetworkComponentDiagnosisSupported="true" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="PN-IO" SubmoduleIdentNumber="0x00001001" DCP_HelloSupported="false">
+                     <ApplicationRelations>
+                        <TimingProperties SendClock="32 64 128"
+                              PreferredSendClock="128"
+                              ReductionRatio="4 8 16 32 64 128 256 512"/>
+                     </ApplicationRelations>
+                     <MediaRedundancy SupportedRole="Client"/>
+                  </InterfaceSubmoduleItem>
+                  <PortSubmoduleItem SubslotNumber="32769"
+                        ID="2"
+                        MAUTypes="16"
+                        TextId="Port1"
+                        SubmoduleIdentNumber="0x1002"
+                        LinkStateDiagnosisCapability="Up+Down"
+                        PortDeactivationSupported="false"
+                        SupportsRingportConfig="true"
+                        IsDefaultRingport="true"/>
+                  <PortSubmoduleItem SubslotNumber="32770"
+                        ID="3"
+                        MAUTypes="16"
+                        TextId="Port2"
+                        SubmoduleIdentNumber="0x1002"
+                        PortDeactivationSupported="false"
+                        SupportsRingportConfig="true"
+                        IsDefaultRingport="true"
+                        LinkStateDiagnosisCapability="Up+Down"/>
+               </SystemDefinedSubmoduleList>
+               <Graphics>
+                  <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+               </Graphics>
+            </DeviceAccessPointItem>
+         </DeviceAccessPointList>
+         <ModuleList>
+            <!-- Start generated code (sec. ModuleList) -->
+
+            <!-- **********Generic 1I BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1I" ModuleIdentNumber="0x00040000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_1I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod1" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_1I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 1I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1I_W" ModuleIdentNumber="0x04080000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_1I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod2" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_1I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 1I DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1I_D" ModuleIdentNumber="0x05100000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_1I_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1I_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod3" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_1I_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1I_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+            <!-- **********Generic 2I BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2I" ModuleIdentNumber="0x02080000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_2I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod4" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_2I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 2I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2I_W" ModuleIdentNumber="0x04100000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_2I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod5" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_2I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 2I DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2I_D" ModuleIdentNumber="0x02200000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_2I_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2I_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod6" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_2I_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2I_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 4I BYTES Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4I" ModuleIdentNumber="0x02100000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_4I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod7" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_4I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 4I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4I_W" ModuleIdentNumber="0x01200000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_4I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod8" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_4I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 4I DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4I_D" ModuleIdentNumber="0x03300000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_4I_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4I_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod9" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_4I_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4I_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 8I BYTES Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8I" ModuleIdentNumber="0x03200000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_8I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod10" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_8I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 8I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8I_W" ModuleIdentNumber="0x02300000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_8I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod11" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_8I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 8I DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8I_D" ModuleIdentNumber="0x03480000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_8I_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8I_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod12" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>	
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_8I_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8I_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 16I BYTES Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16I" ModuleIdentNumber="0x00300000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_16I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod13" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_16I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 16I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16I_W" ModuleIdentNumber="0x02480000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_16I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod14" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_16I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 16I DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16I_D" ModuleIdentNumber="0x03640000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_16I_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16I_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod15" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>	
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>	
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_16I_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16I_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>				
+
+            <!-- **********Generic 32I BYTES Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_32I" ModuleIdentNumber="0x00480000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_32I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_32I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod16" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_32I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_32I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+		    <!-- **********Generic 32I WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_32I_W" ModuleIdentNumber="0x02640000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_32I_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_32I_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod17" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>						   
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Input"/>						   
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_32I_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_32I_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 64I Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_64I" ModuleIdentNumber="0x01640000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_64I"/>
+                  <InfoText TextId="ModRef_BL20_Generic_64I"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod18" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Input"/>
+                        </Input>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_64I"/>
+                        <InfoText TextId="ModRef_BL20_Generic_64I"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+            <!-- **********Generic 1O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1O" ModuleIdentNumber="0x00001000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_1O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod19" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_1O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 1O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1O_W" ModuleIdentNumber="0x01002000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_1O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod20" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_1O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 1O DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_1O_D" ModuleIdentNumber="0x02004000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_1O_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_1O_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod21" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_1O_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_1O_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 2O Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2O" ModuleIdentNumber="0x00002000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_2O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod22" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_2O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 2O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2O_W" ModuleIdentNumber="0x01004000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_2O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod23" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_2O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 2O DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_2O_D" ModuleIdentNumber="0x02008000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_2O_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_2O_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod24" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_2O_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_2O_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 4O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4O" ModuleIdentNumber="0x00004000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_4O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod25" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_4O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 4O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4O_W" ModuleIdentNumber="0x01008000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_4O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod26" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>						   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_4O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 4O DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_4O_D" ModuleIdentNumber="0x0200C000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_4O_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_4O_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod27" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>						   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_4O_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_4O_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 8O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8O" ModuleIdentNumber="0x00008000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_8O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod28" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_8O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 8O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8O_W" ModuleIdentNumber="0x0100C000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_8O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod29" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_8O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 8O DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_8O_D" ModuleIdentNumber="0x02012000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_8O_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_8O_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod30" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>		
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>						   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_8O_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_8O_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 16O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16O" ModuleIdentNumber="0x0000C000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_16O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod31" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_16O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 16O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16O_W" ModuleIdentNumber="0x01012000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_16O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod32" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>						   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_16O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 16O DWORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_16O_D" ModuleIdentNumber="0x02019000">
+               <ModuleInfo CategoryRef="KA-REF mod dword">
+                  <Name TextId="ModRef_BL20_Generic_16O_D"/>
+                  <InfoText TextId="ModRef_BL20_Generic_16O_D"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod33" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>		
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>		
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned32" UseAsBits="true" TextId="TID_Output"/>						   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod dword">
+                        <Name TextId="ModRef_BL20_Generic_16O_D"/>
+                        <InfoText TextId="ModRef_BL20_Generic_16O_D"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 32O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_32O" ModuleIdentNumber="0x00012000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_32O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_32O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod34" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_32O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_32O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+            <!-- **********Generic 32O WORD Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_32O_W" ModuleIdentNumber="0x01019000">
+               <ModuleInfo CategoryRef="KA-REF mod word">
+                  <Name TextId="ModRef_BL20_Generic_32O_W"/>
+                  <InfoText TextId="ModRef_BL20_Generic_32O_W"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod35" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>	
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>
+						   <DataItem DataType="Unsigned16" UseAsBits="true" TextId="TID_Output"/>							   
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod word">
+                        <Name TextId="ModRef_BL20_Generic_32O_W"/>
+                        <InfoText TextId="ModRef_BL20_Generic_32O_W"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>			
+
+            <!-- **********Generic 64O BYTE Module********** -->
+            <ModuleItem ID="ModRef_BL20_Generic_64O" ModuleIdentNumber="0x00019000">
+               <ModuleInfo CategoryRef="KA-REF mod byte">
+                  <Name TextId="ModRef_BL20_Generic_64O"/>
+                  <InfoText TextId="ModRef_BL20_Generic_64O"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="BL20_Generic_VirtSubMod36" SubmoduleIdentNumber="0x00000000">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Output>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                           <DataItem DataType="Unsigned8" UseAsBits="true" TextId="TID_Output"/>
+                        </Output>
+                     </IOData>
+                      <ModuleInfo CategoryRef="KA-REF mod byte">
+                        <Name TextId="ModRef_BL20_Generic_64O"/>
+                        <InfoText TextId="ModRef_BL20_Generic_64O"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+            <!-- End generated code (sec. ModuleList) -->
+         </ModuleList>
+
+         <!-- Parameter -->
+         <ValueList>
+            <!-- Gateway -->
+            <ValueItem ID="PARAM-REF-GW Feldbusprotokolle1">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Feldbusprotokolle2">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Feldbusprotokolle3">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Feldbusprotokolle4">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Ausgaenge Feldbusfehler">
+               <Assignments>
+                  <Assign Content="0" TextId="GW-TextId 0 ausgeben"/>
+                  <Assign Content="2" TextId="GW-TextId Momentanwert halten"/>
+               </Assignments>
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Diagnosen aller Module">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Lastspannungs-Diagnosen Vo">
+            </ValueItem>
+            <ValueItem ID="PARAM-REF-GW Force Mode">
+            </ValueItem>
+            <!-- End generated code (sec. PrmText) -->
+         </ValueList>
+         <!-- Ab hier beginnen die Diagnose-Texte -->
+         <GraphicsList>
+            <GraphicItem ID="1" GraphicFile="GSDML-013D-7101-CDS3_PN_Device"/>
+         </GraphicsList>
+         <!-- Modul Kategorien in HW-Config -->
+         <CategoryList>
+            <CategoryItem ID="KA-REF empty slot"                              TextId="KA-TextId empty slot"/>
+            <CategoryItem ID="KA-REF dap"                                     TextId="DAP1_CatRef"/>
+            <CategoryItem ID="KA-REF dap submod"                              TextId="DAP1_SubmodCatRef" />
+			<CategoryItem ID="KA-REF mod byte"                                TextId="MODB_CatRef"/>
+			<CategoryItem ID="KA-REF mod word"                                TextId="MODW_CatRef"/>
+			<CategoryItem ID="KA-REF mod dword"                               TextId="MODD_CatRef"/>
+         </CategoryList>
+         <ExternalTextList>
+            <!--  *********************  Englisch  *********************  -->
+            <PrimaryLanguage>
+               <!-- Primary language english -->
+               <!-- Allgemeine Bezeichner -->
+               <!-- Gateway, Parameter -->
+               <Text TextId="GW-TextId GW-Parameter"                           Value="Parameters"/>
+               <Text TextId="GW-TextId Ausgaenge Feldbusfehler"                Value="Output behav. at communic. loss"/>
+               <Text TextId="GW-TextId Diagnosen aller Module"                 Value="Deactivate all diagnostics"/>
+               <Text TextId="GW-TextId Lastspannungs-Diagnosen Vo"             Value="Deactiv. load voltage diagn."/>
+               <Text TextId="GW-TextId Force Mode"                             Value="Deactivate I/O-ASS. Force Mode"/>
+               <Text TextId="GW-TextId 0 ausgeben"                             Value="set to 0"/>
+               <Text TextId="GW-TextId Ersatzwert ausgeben"                    Value="set substitute value"/>
+               <Text TextId="GW-TextId Momentanwert halten"                    Value="hold current value"/>          
+               <Text TextId="GW-TextId aktivieren"                             Value="activate"/>
+               <Text TextId="GW-TextId deaktivieren"                           Value="deactivate"/>
+               <Text TextId="GW-TextId Feldbusprotokolle"                      Value="Fieldbus configuration"/>
+               <Text TextId="GW-TextId EIP"                                    Value="Deactivate EtherNet/IP"/>
+               <Text TextId="GW-TextId MB"                                     Value="Deactivate Modbus TCP"/>
+               <Text TextId="GW-TextId PN"                                     Value="Deactivate PROFINET"/>
+               <Text TextId="GW-TextId WEB"                                    Value="Deactivate WEB server"/>
+               <!-- Section Block -->
+               <Text TextId="TID_Input"                                        Value="input"/>
+               <Text TextId="TID_Output"                                       Value="output"/>
+               <!-- Kategorien -->
+               <Text TextId="KA-TextId empty slot"                             Value="unused"/>
+               <!-- Allgemein -->
+               <Text TextId="TextId Parameter"                                 Value="parameters"/>
+               <Text TextId="ModRef empty slot"                                Value="unused"/>
+               <!-- Start generated code (sec. English) -->
+               <Text TextId="GW-TextId DeviceID InfoText"  Value="CODESYS3 PROFINET Device Line Topology Multiprotocol"/>
+               <Text TextId="DAP1_CatRef"                  Value="CODESYS3"/>
+               <Text TextId="DAP1_Name"                    Value="CDS3 PN Device"/>
+               <Text TextId="DAP1_InfoText"                Value="CODESYS3 generic PROFINET Device"/>
+               <Text TextId="DAP1_SubmodName"              Value="DAP v3.1"/>
+               <Text TextId="DAP1_SubmodInfoText"          Value="PROFINET-RT device with 2 ports; IM0-4 functionality; Topology recognition;"/>
+               <Text TextId="DAP1_SubmodCatRef"            Value="DAP module"/>
+               <Text TextId="X1"                 Value="X1"/>
+               <Text TextId="X1P1"               Value="X1 P1"/>
+               <Text TextId="X1P2"               Value="X1 P2"/>
+               <Text TextId="PN-IO"              Value="PN-IO"/>
+               <Text TextId="Port1"              Value="Port 1"/>
+               <Text TextId="Port2"              Value="Port 2"/>
+        
+               <Text TextId="MODB_CatRef"            Value="BYTE"/>	
+			   <Text TextId="MODW_CatRef"            Value="WORD"/>	
+			   <Text TextId="MODD_CatRef"            Value="DWORD"/>
+			   
+               <Text TextId="ModRef_BL20_Generic_1I" Value="IN 1 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_1I_W" Value="IN 1 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_1I_D" Value="IN 1 DWORD"/>
+               <Text TextId="ModRef_BL20_Generic_2I" Value="IN 2 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_2I_W" Value="IN 2 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_2I_D" Value="IN 2 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_4I" Value="IN 4 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_4I_W" Value="IN 4 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_4I_D" Value="IN 4 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_8I" Value="IN 8 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_8I_W" Value="IN 8 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_8I_D" Value="IN 8 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_16I" Value="IN 16 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_16I_W" Value="IN 16 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_16I_D" Value="IN 16 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_32I" Value="IN 32 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_32I_W" Value="IN 32 WORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_64I" Value="IN 64 BYTE"/>
+
+               <Text TextId="ModRef_BL20_Generic_1O" Value="OUT 1 BYTE"/>
+               <Text TextId="ModRef_BL20_Generic_1O_W" Value="OUT 1 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_1O_D" Value="OUT 1 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_2O" Value="OUT 2 BYTE"/>
+               <Text TextId="ModRef_BL20_Generic_2O_W" Value="OUT 2 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_2O_D" Value="OUT 2 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_4O" Value="OUT 4 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_4O_W" Value="OUT 4 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_4O_D" Value="OUT 4 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_8O" Value="OUT 8 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_8O_W" Value="OUT 8 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_8O_D" Value="OUT 8 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_16O" Value="OUT 16 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_16O_W" Value="OUT 16 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_16O_D" Value="OUT 16 DWORD"/>
+               <Text TextId="ModRef_BL20_Generic_32O" Value="OUT 32 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_32O_W" Value="OUT 32 WORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_64O" Value="OUT 64 BYTE"/>
+
+               <!-- End generated code (sec. English) -->
+            </PrimaryLanguage>
+            <!--  *********************  Deutsch  *********************  -->
+            <Language xml:lang="de">
+               <!-- 2nd language germans -->
+               <!-- Allgemeine Bezeichner -->
+               <!-- Gateway, Parameter -->
+               <Text TextId="GW-TextId GW-Parameter"                           Value="Stationsparameter"/>
+               <Text TextId="GW-TextId Ausgaenge Feldbusfehler"                Value="Ausgaenge Kommunikationsfehler"/>
+               <Text TextId="GW-TextId Diagnosen aller Module"                 Value="Alle Diagnosen deaktivieren"/>
+               <Text TextId="GW-TextId Lastspannungs-Diagnosen Vo"             Value="Lastspannungs-Diagnosen deaktiv."/>
+               <Text TextId="GW-TextId Force Mode"                             Value="I/O-ASS. Force Mode deaktivieren"/>
+               <Text TextId="GW-TextId 0 ausgeben"                             Value="0 ausgeben"/>
+               <Text TextId="GW-TextId Ersatzwert ausgeben"                    Value="Ersatzwert ausgeben"/>
+               <Text TextId="GW-TextId Momentanwert halten"                    Value="Momentanwert halten"/>
+               <Text TextId="GW-TextId aktivieren"                             Value="aktivieren"/>
+               <Text TextId="GW-TextId deaktivieren"                           Value="deaktivieren"/>
+               <Text TextId="GW-TextId Feldbusprotokolle"                      Value="Feldbus-Konfiguration"/>
+               <Text TextId="GW-TextId EIP"                                    Value="Deaktiviere EtherNet/IP"/>
+               <Text TextId="GW-TextId MB"                                     Value="Deaktiviere Modbus TCP"/>
+               <Text TextId="GW-TextId PN"                                     Value="Deaktiviere PROFINET"/>
+               <Text TextId="GW-TextId WEB"                                    Value="Deaktiviere WEB Server"/>
+               <!-- Section Block -->
+               <Text TextId="TID_Input"                                        Value="Eingang"/>
+               <Text TextId="TID_Output"                                       Value="Ausgang"/>
+               <!-- Kategorien -->
+               <Text TextId="KA-TextId empty slot"                             Value="ungenutzt"/>
+               <!-- Allgemein -->
+               <Text TextId="TextId Parameter"                                 Value="Parameter"/>
+               <Text TextId="ModRef empty slot"                                Value="ungenutzt"/>
+               <!-- Start generated code (sec. Deutsch) -->
+               <Text TextId="GW-TextId DeviceID InfoText"  Value="CODESYS3 PROFINET Device Linientopologie Multiprotokoll"/>
+               <Text TextId="DAP1_CatRef"                  Value="CODESYS3"/>
+               <Text TextId="DAP1_Name"                    Value="CDS3 PN Device"/>
+               <Text TextId="DAP1_InfoText"                Value="CODESYS3 generisches PROFINET Device"/>
+               <Text TextId="DAP1_SubmodName"              Value="DAP v3.1"/>
+               <Text TextId="DAP1_SubmodInfoText"          Value="PROFINET-RT Geraet mit 2 Ports; unterstuetzt IM0-4 Funktionalitaet; Topology Erkennung;"/>
+               <Text TextId="DAP1_SubmodCatRef"            Value="DAP Modul"/>
+               <Text TextId="X1"                 Value="X1"/>
+               <Text TextId="X1P1"               Value="X1 P1"/>
+               <Text TextId="X1P2"               Value="X1 P2"/>
+               <Text TextId="PN-IO"              Value="PN-IO"/>
+               <Text TextId="Port1"              Value="Port 1"/>
+               <Text TextId="Port2"              Value="Port 2"/>
+
+               <Text TextId="MODB_CatRef"            Value="BYTE"/>	
+			   <Text TextId="MODW_CatRef"            Value="WORD"/>	
+			   <Text TextId="MODD_CatRef"            Value="DWORD"/>			   
+			   
+               <Text TextId="ModRef_BL20_Generic_1I" Value="IN 1 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_1I_W" Value="IN 1 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_1I_D" Value="IN 1 DWORD"/>
+               <Text TextId="ModRef_BL20_Generic_2I" Value="IN 2 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_2I_W" Value="IN 2 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_2I_D" Value="IN 2 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_4I" Value="IN 4 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_4I_W" Value="IN 4 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_4I_D" Value="IN 4 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_8I" Value="IN 8 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_8I_W" Value="IN 8 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_8I_D" Value="IN 8 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_16I" Value="IN 16 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_16I_W" Value="IN 16 WORD"/>
+			   <Text TextId="ModRef_BL20_Generic_16I_D" Value="IN 16 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_32I" Value="IN 32 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_32I_W" Value="IN 32 WORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_64I" Value="IN 64 BYTE"/>
+
+               <Text TextId="ModRef_BL20_Generic_1O" Value="OUT 1 BYTE"/>
+               <Text TextId="ModRef_BL20_Generic_1O_W" Value="OUT 1 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_1O_D" Value="OUT 1 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_2O" Value="OUT 2 BYTE"/>
+               <Text TextId="ModRef_BL20_Generic_2O_W" Value="OUT 2 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_2O_D" Value="OUT 2 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_4O" Value="OUT 4 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_4O_W" Value="OUT 4 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_4O_D" Value="OUT 4 DWORD"/>				   
+               <Text TextId="ModRef_BL20_Generic_8O" Value="OUT 8 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_8O_W" Value="OUT 8 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_8O_D" Value="OUT 8 DWORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_16O" Value="OUT 16 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_16O_W" Value="OUT 16 WORD"/>
+               <Text TextId="ModRef_BL20_Generic_16O_D" Value="OUT 16 DWORD"/>
+               <Text TextId="ModRef_BL20_Generic_32O" Value="OUT 32 BYTE"/>
+			   <Text TextId="ModRef_BL20_Generic_32O_W" Value="OUT 32 WORD"/>			   
+               <Text TextId="ModRef_BL20_Generic_64O" Value="OUT 64 BYTE"/>
+               <!-- End generated code (sec. Deutsch) -->
+            </Language>
+         </ExternalTextList>
+      </ApplicationProcess>
+   </ProfileBody>
+</ISO15745Profile>
+
