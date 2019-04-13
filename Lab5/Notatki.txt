@@ -1,0 +1,4 @@
+Otrzymane nastawy po autotune:
+P = 1,436
+I = 40,70
+D = 9,769
